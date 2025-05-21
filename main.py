@@ -1,5 +1,6 @@
 import pandas as pd
 import seaborn as sns
+import xgboost as xgb
 from sklearn.model_selection import train_test_split
 
 def load_penguins_data():
@@ -21,3 +22,10 @@ if __name__ == "__main__":
     # Print the shapes
     print("Training set shape:", X_train.shape)
     print("Test set shape:", X_test.shape)
+
+
+
+# Assuming X_train and y_train are already defined
+model = xgb.XGBClassifier()
+print("Default XGBoost model created:")
+print(model)
